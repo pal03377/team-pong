@@ -28,6 +28,9 @@ The game works a little different from the original Pong game:
 - After 60 seconds of inactivity, players will become `inactive` as indicated on the top of the clients. This means they are not counted towards the player count necessary to start a game. As soon as a player taps an arrow, they will be active again.
 
 
+## Demo
+Here's a quick demo (if too many people use it, it won't work any more though, so please host it yourself): https://pong.pschwind.de
+
 ## Contributing
 If you want to contribute, you can open a pull request. If you want to add a new feature, please open an issue first to discuss it.
 
