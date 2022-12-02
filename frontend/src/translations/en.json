@@ -1,0 +1,78 @@
+{
+    "board": {
+        "participate": "Play along: {host}",
+        "developmentCredits": "Developed by Paul Schwind",
+        "team": {
+            "name": "Team {name}",
+            "participantsCurrently": "currently {count} {count, plural,\none {player}\nother {players}}",
+            "notEnoughParticipants": "only {count} / {needed} {needed, plural,\none {player}\nother {players}}"
+        }
+    },
+    "client": {
+        "decidingOnTeam": "Choosing team...",
+        "help": {
+            "title": "Team-Pong",
+            "texts": [
+                "You are in a randomly chosen team, A or B (as seen on top of the screen). You collect points by playing Pong.",
+                "For a game to start, there have to be the shown number of people per team connected.",
+                "More people in a team are better because each one of you can only move the team platform once every few seconds for a bit (up or down).",
+                "The closer the ball bounces on the edge of the platform, the faster it comes back."
+            ],
+            "credits": [
+                "This game was developed by Paul Schwind.",
+                "My Website: ",
+                "Have fun coordinating!"
+            ],
+            "soundEffectCredits": "Credits for sound effects",
+            "legal": "Imprint & Privacy Policy"
+        }
+    },
+    "config": {
+        "title": "Configure Team-Pong",
+        "language": {
+            "title": "Language"
+        },
+        "reset": {
+            "title": "Reset Game",
+            "description": "Resets points, balls and the countdown.",
+            "action": "Reset Game"
+        },
+        "note": "Note: Most of the following settings only apply to the next game.",
+        "minPlayerNumberPerTeam": {
+            "title": "Minimum number of players per team",
+            "description": "How many players have to be joined each for a game to start."
+        },
+        "platformHeight": {
+            "title": "Platform height",
+            "description": "How high the platforms are."
+        },
+        "platformMovementSpeed": {
+            "title": "Platform movement speed",
+            "description": "How fast the platforms move (currently: {current, number}, default: {default, number})."
+        },
+        "tapCoolDown": {
+            "title": "Tap cooldown",
+            "description": "How long the players have to wait in milliseconds (!) before they are allowed to tap on the arrows again (default {default, number})."
+        },
+        "numberOfBalls": {
+            "title": "Number of balls",
+            "description": "How many balls the game spawns at once (recommended: 1 or 2)."
+        },
+        "ballSpeedFactor": {
+            "title": "Default ball speed",
+            "description": "How fast the balls move (currently: {current}, default {default, number})."
+        },
+        "maxBallSpeedFactor": {
+            "title": "Maximum ball speed",
+            "description": "how fast the balls move when bouncing off of the outermost part of a platform (currently: {current, number}, default {default, number})."
+        },
+        "countdown": {
+            "title": "Countdown",
+            "description": "How long the countdown is before the game starts, in seconds."
+        },
+        "blopSoundEnabled": {
+            "title": "Blop sound",
+            "description": "Whether the blop sound is played when the ball bounces off of a platform."
+        }
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "board": {
+        "participate": "Mitspielen: {host}",
+        "developmentCredits": "Entwickelt von Paul Schwind",
+        "team": {
+            "name": "Team {name}",
+            "participantsCurrently": "aktuell {count} {count, plural,\none {Spieler}\nother {Personen}}",
+            "notEnoughParticipants": "nur {count} / {needed} {needed, plural,\none {Person}\nother {Personen}}"
+        }
+    },
+    "client": {
+        "decidingOnTeam": "Team wird ausgewählt...",
+        "help": {
+            "title": "Team-Pong",
+            "texts": [
+                "Du bist in einem zufälligen Team, A oder B (steht ganz oben). Ihr sammelt Punkte, indem ihr Pong spielt.",
+                "Damit ein Spiel losgeht, müssen aus jedem Team die angegebene Anzahl an Personen verbunden sein.",
+                "Mehr Leute im Team sind besser, weil du alleine deine Team-Plattform nur alle paar Sekunden ein bisschen bewegen kannst (auf oder ab).",
+                "Je näher der Ball am Rand der Plattform abprallt, desto schneller und steiler fliegt er zurück."
+            ],
+            "credits": [
+                "Dieses Spiel wurde von Paul Schwind entwickelt.",
+                "Meine Webseite: ",
+                "Viel Spaß beim Koordinieren!"
+            ],
+            "soundEffectCredits": "Credits für Soundeffekte",
+            "legal": "Impressum & Datenschutz"
+        }
+    },
+    "config": {
+        "title": "Konfiguration Team-Pong",
+        "language": {
+            "title": "Sprache"
+        },
+        "reset": {
+            "title": "Spiel zurücksetzen",
+            "description": "Setzt Punktestand, Bälle und den Countdown zurück.",
+            "action": "Spiel zurücksetzen"
+        },
+        "note": "Bemerkung: Die meisten der folgenden Einstellungen gelten erst für das nächste startende Spiel.",
+        "minPlayerNumberPerTeam": {
+            "title": "Mindestanzahl Spieler pro Team",
+            "description": "Wie viele Spieler den Teams jeweils beigetreten sein müssen, damit ein Spiel startet."
+        },
+        "platformHeight": {
+            "title": "Plattformhöhe",
+            "description": "Wie hoch die Plattformen sind, die die Spieler bewegen können."
+        },
+        "platformMovementSpeed": {
+            "title": "Geschwindigkeit der Plattformen",
+            "description": "Wie schnell die Plattformen sich bewegen (aktuell: {current, number}, Standard: {default, number})."
+        },
+        "tapCoolDown": {
+            "title": "Abklingzeit zwischen Taps",
+            "description": "Wie lange die Spieler in Millisekunden (!) warten müssen, bis sie wieder auf die Pfeile tippen können (Standard {default, number})."
+        },
+        "numberOfBalls": {
+            "title": "Anzahl Bälle",
+            "description": "Wie viele Bälle gleichzeitig im Spiel sind (empfohlen: 1 oder 2)."
+        },
+        "ballSpeedFactor": {
+            "title": "Standardgeschwindigkeit der Bälle",
+            "description": "Wie schnell die Bälle sich bewegen (aktuell: {current}, Standard {default, number})."
+        },
+        "maxBallSpeedFactor": {
+            "title": "Maximalgeschwindigkeit der Bälle",
+            "description": "Wie schnell die Bälle sich maximal bewegen, wenn sie ganz am Rand einer Plattform andotzen (aktuell: {current, number}, Standard {default, number})."
+        },
+        "countdown": {
+            "title": "Countdown",
+            "description": "Wie lange der Countdown vor dem Start eines Spiels dauert, in Sekunden."
+        },
+        "blopSoundEnabled": {
+            "title": "Anstoßsound",
+            "description": "Soll ein Sound abgespielt werden, wenn ein Ball an die Plattformen oder Wände stößt?"
+        }
+    }
+}
