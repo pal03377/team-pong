@@ -26,9 +26,6 @@
 		socket.emit("join_board");
 	});
 
-	$: console.log($_("board.developmentCredits"));
-	$: console.log($boardConfig)
-
 	let teams = [];
 	socket.on("teams", data => teams = data);
 	let balls = [];
