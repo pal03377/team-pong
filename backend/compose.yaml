@@ -6,7 +6,7 @@ services:
     volumes:
       - frontend:/frontend
     environment:
-      - LEGAL_LINK=${LEGAL_LINK}
+      - LEGAL_LINK
     build:
       context: ..
       dockerfile: backend/node/Dockerfile
@@ -17,7 +17,8 @@ services:
       - frontend:/frontend
     environment:
       - FLASK_APP=app/server.py
-      - FLASK_DEBUG=${FLASK_DEBUG}
+      - FLASK_DEBUG
+      - PORT
       - PYTHONUNBUFFERED=1
       - 'RUN=gunicorn -c /app/gunicorn_conf.py app.__main__:app'
     command: gunicorn -c /app/gunicorn_conf.py app.__main__:app
