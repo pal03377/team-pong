@@ -1,3 +1,4 @@
 $DOMAIN {
+	log $PROJECT_NAME
 	reverse_proxy :$PORT
 }
