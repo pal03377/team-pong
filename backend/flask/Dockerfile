@@ -7,8 +7,5 @@ RUN apk add build-base python3-dev libffi-dev
 COPY ./backend/app/requirements.txt /app/requirements.txt
 RUN pip install -r /app/requirements.txt
 
-# copy rest of py code
-COPY ./backend/app /app
-
 ENV MODULE_NAME app
 ENV STATIC_PATH /app/app/static

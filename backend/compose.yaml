@@ -12,6 +12,9 @@ services:
       dockerfile: backend/node/Dockerfile
 
   team-pong-flask:
+    build:
+      context: ..
+      dockerfile: ./backend/flask/Dockerfile
     volumes:
       - ./app:/app
       - frontend:/frontend
@@ -19,12 +22,13 @@ services:
       - FLASK_APP=app/server.py
       - FLASK_DEBUG
       - PORT
+      - PY_DEBUG_PORT
       - PYTHONUNBUFFERED=1
-      - 'RUN=gunicorn -c /app/gunicorn_conf.py app.__main__:app'
-    command: gunicorn -c /app/gunicorn_conf.py app.__main__:app
-    build:
-      context: ..
-      dockerfile: ./backend/flask/Dockerfile
+      - GEVENT_SUPPORT=True
+      - 'RUN=python -Xfrozen_modules=off -u -m debugpy --listen 0.0.0.0:$PY_DEBUG_PORT -m gunicorn -c /app/gunicorn_conf.py app.__main__:app --reload'
+    command: python -Xfrozen_modules=off -u -m debugpy --listen 0.0.0.0:$PY_DEBUG_PORT -m gunicorn -c /app/gunicorn_conf.py app.__main__:app --reload
+    ports:
+      - "127.0.0.1:$PY_DEBUG_PORT:$PY_DEBUG_PORT"
 
   team-pong-nginx:
     image: nginx:1.21.1
