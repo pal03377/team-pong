@@ -14,7 +14,7 @@ app = Flask(
     static_url_path="/static",
 )
 CORS(app)
-socketio = SocketIO(app, cors_allowed_origins="*") # , engineio_logger=True, logger=True)
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet") # , engineio_logger=True, logger=True)
 db = dataset.connect(
     'sqlite:///db.sqlite', engine_kwargs={"connect_args": {'check_same_thread': False}})
 

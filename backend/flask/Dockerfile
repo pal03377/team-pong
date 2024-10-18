@@ -1,4 +1,4 @@
-FROM tiangolo/meinheld-gunicorn-flask:python3.8-alpine3.11
+FROM tiangolo/meinheld-gunicorn-flask:python3.9-alpine3.13
 
 # additional python packages
 RUN apk add build-base python3-dev libffi-dev
