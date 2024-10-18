@@ -307,7 +307,7 @@ if __name__ == "__main__":
     socketio.run(
         app, 
         host="0.0.0.0", 
-        port=os.env.get("PORT", 5109), 
+        port=os.environ.get("PORT", 5109), 
         debug=True, 
         use_reloader=True,
     )

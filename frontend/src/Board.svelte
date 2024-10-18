@@ -4,6 +4,7 @@
 	import { _ } from "svelte-i18n";
 	import io from "socket.io-client";
 	import confetti from "canvas-confetti";
+	import QRCode from "qrcode";
 
 	import TeamView from "./TeamView.svelte";
 	import Platform from "./Platform.svelte";
@@ -22,8 +23,13 @@
 	});
 	listenForConfigChange(socket);
 
+	let qrCodeCanvas;
 	onMount(async () => {
 		socket.emit("join_board");
+		QRCode.toCanvas(qrCodeCanvas, location.origin, function (error) {
+			if (error) { console.error(error); }
+			console.log("QR code generated");
+		})
 	});
 
 	let teams = [];
@@ -96,6 +102,8 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <main bind:this={ main } on:click={ goIntoFullscreen }>
 
+	<canvas id="qrcode" bind:this={ qrCodeCanvas }></canvas>
+
 	<input class="infoText top" bind:value={topText} on:input={() => topTextUnchanged = false} />
 	<input class="infoText bottom" bind:value={bottomText} on:input={() => bottomTextUnchanged = false} />
 
@@ -149,6 +157,13 @@ main {
 
 :global(main input) {
 	font-family: Montserrat, sans-serif;
+}
+
+#qrcode {
+	position: absolute;
+	bottom: 7vh;
+	left: 0; right: 0; margin: 0 auto;
+	width: 20vw; height: 20vw;
 }
 
 .infoText {
